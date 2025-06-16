@@ -99,7 +99,8 @@ while True:
     else:
         print("Skaičius")
 print()
-
+print("-------------Tris kartus iškritus herbui---------------")
+print()
 herbai = 0
 while herbai < 3:
     result = random.randint(0,1)
@@ -108,6 +109,9 @@ while herbai < 3:
         herbai += 1
     else:
         print("Skaičius")
+print()
+
+print("-------------Tris kartus iš eilės iškritus herbui---------------")
 print()
 herbai = 0
 while herbai < 3:
