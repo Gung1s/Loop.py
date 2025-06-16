@@ -1,3 +1,5 @@
+import random
+
 print()
 print("-------------------------Trečia paskaita----------------------------")
 print()
@@ -35,3 +37,51 @@ print()
 print(len(games)) # kiek yra elementų masyve
 for zaidimas in games:
     print("My favorites game is: " + zaidimas)
+print()
+
+count = 0
+for i in range(50):
+    print(i)
+    count += 1
+print("prasisuko", count)
+
+for i in range(10):
+    if i % 2 == 0:
+        continue # sustabdo pagal sąlygą ir grįžta atgal
+    print(i)
+print()
+
+for i in range(1, 10):
+    if i % 4 == 0:
+        break # sustabdo pagal sąlygą ir nutraukia ciklą
+    print(i)
+
+# loop in loop
+# while paskirtis suktis tol kol bus patenkinta sąlyga
+
+print()
+print("-------------------------While----------------------------")
+print()
+
+counter = 0
+while True:
+    counter += 1
+    if counter >= 5:
+        break
+    print(counter)
+print()
+
+while True:
+    rnd = random.randint(1, 6)
+    print(rnd)
+    if rnd == 1:
+        break
+print()
+
+is_even = False
+
+while not is_even:
+    rnd = random.randint(1, 10)
+    if rnd % 2 == 0:
+        is_even = True
+    print(rnd)
