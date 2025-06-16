@@ -75,5 +75,46 @@ print()
 print("-------------------------Penkta užduotis----------------------------")
 print()
 
+# Metam monetą. Monetos kritimo rezultatą imituojam random.randint(x,x) funkcija, kur 0 yra herbas, o 1 - skaičius.
+# Monetos metimo rezultatus išvedame į ekraną atskiroje eilutėje: “S” jeigu iškrito skaičius ir “H” jeigu herbas.
+# Suprogramuokite tris skirtingus scenarijus kai monetos metimą stabdome:
+# Iškritus herbui;
+# Tris kartus iškritus herbui;
+# Tris kartus iš eilės iškritus herbui;
 
+result = random.randint(0,1)
+print(result)
+if result == 1:
+    result = "Skaičius"
+else:
+    result = "Herbas"
+print(result)
+print()
 
+while True:
+    result = random.randint(0,1)
+    if result == 0:
+        print("Herbas")
+        break
+    else:
+        print("Skaičius")
+print()
+
+herbai = 0
+while herbai < 3:
+    result = random.randint(0,1)
+    if result == 0:
+        print("Herbas")
+        herbai += 1
+    else:
+        print("Skaičius")
+print()
+herbai = 0
+while herbai < 3:
+    result = random.randint(0,1)
+    if result == 0:
+        print("Herbas")
+        herbai += 1
+    else:
+        print("Skaičius")
+        herbai = 0
