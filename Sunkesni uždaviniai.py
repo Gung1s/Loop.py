@@ -162,6 +162,23 @@ print()
 print("Partiją laimėjo:", winner)
 print()
 
+print()
+print("-------------------------Septinta užduotis----------------------------")
+print()
+
+# Reikia nupaišyti pilnavidurį rombą, taip pat, kaip ir pilnavidurį kvadratą (https://lt.wikipedia.org/wiki/Rombas),
+# kurio aukštis 21 eilutė.
 
 
-
+for x in range(1, 12):
+    for y in range(11 - x):
+        print(" ", end = "")
+    for z in range((x * 2) - 1):
+        print("*", end = "")
+    print()
+for x in range(12, 22):
+    for y in range(x - 11):
+        print(" ", end = "")
+    for z in range((22 - x) * 2 - 1):
+        print("*", end = "")
+    print()
