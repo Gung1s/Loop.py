@@ -234,3 +234,19 @@ print()
 # Skaičiai turi būti unikalūs (t.y. nesikartoti). Sugeneruokite antrą stringą, pasinaudodami pirmu,
 # palikdami jame tik pirminius skaičius (t.y tokius, kurie dalinasi be liekanos tik iš 1 ir patys savęs).
 # Skaičius stringe sudėliokite didėjimo tvarka, nuo mažiausio iki didžiausio. (reikės split() funkcijos ir masyvų.)
+
+numbers = random.sample(range(1,200), 50)
+print(" ".join(map(str, sorted(numbers))))
+print()
+primes = []
+for i in numbers:
+    if i > 1:
+        for j in range(2, i):
+            if i % j == 0:
+                break
+            else:
+                primes.append(i)
+print(" ".join(map(str, sorted(primes))))
+print()
+
+
