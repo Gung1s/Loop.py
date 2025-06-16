@@ -182,3 +182,55 @@ for x in range(12, 22):
     for z in range((22 - x) * 2 - 1):
         print("*", end = "")
     print()
+
+print()
+print("-------------------------Aštunta užduotis----------------------------")
+print()
+
+# Sumodeliuokite vinies kalimą. Įkalimo gylį sumodeliuokite pasinaudodami random.randint(x,x) funkcija.
+# Vinies ilgis 8.5cm (pilnai sulenda į lentą).
+# “Įkalkite” 5 vinis mažais smūgiais. Vienas smūgis vinį įkala 5-20 mm. Suskaičiuokite kiek reikia smūgių.
+# “Įkalkite” 5 vinis dideliais smūgiais. Vienas smūgis vinį įkala 20-30 mm, bet yra 50% tikimybė
+# (pasinaudokite random.randint(x,x) funkcija tikimybei sumodeliuoti), kad smūgis nepataikys į vinį.
+# Suskaičiuokite kiek reikia smūgių.
+
+counter = 0
+for v in range(1,6):
+    hit_deep = 0
+    hits = 0
+    while hit_deep < 85:
+        hit = random.randint(5,20)
+        hits += 1
+        hit_deep += hit
+    counter += hits
+print()
+print(f"Sukalti penkias vinis mažų smūgių reikia: {counter}")
+print()
+
+counter = 0
+for v in range(1,6):
+    hit_deep = 0
+    hits = 0
+    chance = 0
+    while hit_deep < 85:
+        hit = random.randint(20,30)
+        hits += 1
+        chance = random.randint(0,1)
+        if chance == 1:
+            hit_deep += hit
+            print(hit, end=" ")
+        else:
+            print("miss", end=" ")
+    counter += hits
+print()
+print(f"Sukalti penkias vinis didelių smūgių užteks: {counter}")
+print()
+
+print()
+print("-------------------------Devinta užduotis----------------------------")
+print()
+
+# Sugeneruokite stringą, kurį sudarytų 50 atsitiktinių skaičių nuo 1 iki 200, atskirtų tarpais.
+# Skaičiai turi būti unikalūs (t.y. nesikartoti). Sugeneruokite antrą stringą, pasinaudodami pirmu,
+# palikdami jame tik pirminius skaičius (t.y tokius, kurie dalinasi be liekanos tik iš 1 ir patys savęs).
+# Skaičius stringe sudėliokite didėjimo tvarka, nuo mažiausio iki didžiausio. (reikės split() funkcijos ir masyvų.)
