@@ -57,8 +57,23 @@ print()
 for i in range (25):
     print("*" * 25)
 
+print()
+print("-------------------------Ketvirta užduotis----------------------------")
+print()
 
+# Prieš tai nupieštam kvadratui nupieškite istrižaines zaigzdutę pakeisdami kitu simboliu.
 
+for x in range (25):
+    for y in range (25):
+        if x == y or x + y == 24:
+            print("8", end=" ")
+        else:
+            print("*", end=" ")
+    print()
+
+print()
+print("-------------------------Penkta užduotis----------------------------")
+print()
 
 
 
