@@ -23,5 +23,38 @@ for x in numbers:
 print()
 print("Didesnių skaičių, nei 150 yra:", count)
 
+print()
+print("-------------------------Antra užduotis----------------------------")
+print()
+
+# Vienoje eilutėje atspausdinkite visus skaičius nuo 1 iki 3000, kurie dalijasi iš 77
+# be liekanos. Skaičius atskirkite kableliais. Po paskutinio skaičiaus kablelio neturi būti.
+
+arr = [] # sukuriam masyvą
+for i in range (1,3000):
+    if i % 77 == 0:
+        arr.append(i) # append įdedam į masyvą
+print(*[i for i in arr], sep = ",")
+print()
+
+# kitas sprendimas
+
+print(", ".join(str(i) for i in range(1, 3000) if i % 77 == 0))
+
+print()
+print("-------------------------Trečia užduotis----------------------------")
+print()
+
+# Nupieškite kvadratą iš “*”, kurio kraštines sudaro 25“*”.
+# * * * * * * * * * * *
+# * * * * * * * * * * *
+# * * * * * * * * * * *
+# * * * * * * * * * * *
+# * * * * * * * * * * *
+# * * * * * * * * * * *
+# * * * * * * * * * * *
+
+
+
 
 
