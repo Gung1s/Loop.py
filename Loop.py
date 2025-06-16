@@ -85,3 +85,10 @@ while not is_even:
     if rnd % 2 == 0:
         is_even = True
     print(rnd)
+
+print("--------------Loop loop-------------")
+
+for y in range(1, 11):
+    for x in range(1, 11):
+        print(y*x, end=" ")
+    print() # po END duoda naują eilutę
