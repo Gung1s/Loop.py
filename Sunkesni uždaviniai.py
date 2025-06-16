@@ -122,3 +122,46 @@ while herbai < 3:
     else:
         print("Skaičius")
         herbai = 0
+
+print()
+print("-------------------------Šešta užduotis----------------------------")
+print()
+
+# Kazys ir Petras žaidžia šaškėm. Petras surenka taškų kiekį nuo 10 iki 20, Kazys surenka taškų kiekį nuo 5 iki 25.
+# Vienoje eilutėje išvesti žaidėjų vardus su taškų kiekiu ir “Partiją laimėjo: ​laimėtojo vardas​”.
+# Taškų kiekį generuokite funkcija ​random.randint(x,x)​. Žaidimą laimi tas, kas greičiau surenka 222 taškus.
+# Partijas kartoti tol, kol kažkuris žaidėjas pirmas surenka 222 arba daugiau taškų.
+
+petras_count = 0
+kazys_count = 0
+
+while petras_count < 222 and kazys_count < 222:
+    petras_points = random.randint(10,20)
+    kazys_point = random.randint(5,25)
+
+    petras_count += petras_points
+    kazys_count += kazys_point
+
+    print(f"Petras: {petras_points}, Kazys: {kazys_point}")
+print()
+
+print(f"Petras: {petras_count}, Kazys: {kazys_count}")
+if petras_count >= 222:
+    winner = "Petras"
+else:
+    winner = "Kazys"
+if kazys_count >= 222 and petras_count >= 222:
+    if kazys_count > petras_count:
+        winner = "Kazys"
+    elif kazys_count < petras_count:
+        winner = "Petras"
+    else:
+        winner = "Lygiosios"
+
+print()
+print("Partiją laimėjo:", winner)
+print()
+
+
+
+
