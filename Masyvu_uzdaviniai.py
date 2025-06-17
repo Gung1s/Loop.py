@@ -58,5 +58,32 @@ for i, val in enumerate(arr):
         break
 print(f"Pirmas indeksas, kuris yra didesnis už 10: {i}")
 
+print()
+print("-------------------Trečias uždavinys-------------")
+print()
 
+# Sugeneruokite masyvą, kurio reikšmės atsitiktinės raidės A, B, C ir D, o ilgis 200. Suskaičiuokite kiek yra kiekvienos raidės.
 
+arr_let = [random.choice(["A", "B", "C", "D"]) for i in range(200)]
+count_a = 0
+count_b = 0
+count_c = 0
+count_d = 0
+for i in arr_let:
+    if i == "A":
+        count_a += 1
+    if i == "B":
+        count_b += 1
+    if i == "C":
+        count_c += 1
+    if i == "D":
+        count_d += 1
+print(arr_let)
+print(f"Raidžių A: {count_a}")
+print(f"Raidžių B: {count_b}")
+print(f"Raidžių C: {count_c}")
+print(f"Raidžių D: {count_d}")
+
+print()
+print("-------------------Ketvirta uždavinys-------------")
+print()
