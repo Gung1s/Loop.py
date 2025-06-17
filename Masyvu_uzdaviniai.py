@@ -87,3 +87,31 @@ print(f"Raidžių D: {count_d}")
 print()
 print("-------------------Ketvirta uždavinys-------------")
 print()
+
+# Išrūšiuokite 3 uždavinio masyvą pagal abecėlę.
+
+print(sorted(arr_let))
+
+print()
+print("-------------------Penktas uždavinys-------------")
+print()
+
+# Sugeneruokite 3 masyvus pagal 3 uždavinio sąlygą. Sudėkite masyvus, sudėdami atitinkamas reikšmes.
+# (turi gautis masyvas, kurio elementai, kaip pvz atrodo taip: “AAB”, “CBC”, “DDA”, 200 reikšmių).
+# Paskaičiuokite kiek skirtingų reikšmių kombinacijų gavote.
+
+arr_let1 = [random.choice(["A", "B", "C", "D"]) for i in range(200)]
+arr_let2 = [random.choice(["A", "B", "C", "D"]) for i in range(200)]
+arr_let3 = [random.choice(["A", "B", "C", "D"]) for i in range(200)]
+print(arr_let1)
+print(arr_let2)
+print(arr_let3)
+arr_merged = [arr_let1[i] + arr_let2[i] + arr_let3[i] for i in range(200)]
+print(arr_merged)
+value_unique = set(arr_merged)
+value_unique_count = len(value_unique)
+print(value_unique_count)
+
+print()
+print("-------------------Šeštas uždavinys-------------")
+print()
