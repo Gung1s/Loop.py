@@ -236,17 +236,23 @@ print()
 # Skaičius stringe sudėliokite didėjimo tvarka, nuo mažiausio iki didžiausio. (reikės split() funkcijos ir masyvų.)
 
 numbers = random.sample(range(1,200), 50)
-print(" ".join(map(str, sorted(numbers))))
+numbers_sort = " ".join(map(str, sorted(numbers)))
+print(numbers_sort)
 print()
+numbers_arr = list(map(int, numbers_sort.split()))
 primes = []
-for i in numbers:
-    if i > 1:
-        for j in range(2, i):
-            if i % j == 0:
-                break
-            else:
-                primes.append(i)
-print(" ".join(map(str, sorted(primes))))
+for i in numbers_arr:
+    if i < 2:
+        continue
+    is_prime = True
+    for j in range(2, int(i ** 0.5) + 1):
+        if i % j == 0:
+            is_prime = False
+            break
+    if is_prime:
+        primes.append(i)
+primes.sort()
+print(" ".join(map(str, primes)))
 print()
 
 
