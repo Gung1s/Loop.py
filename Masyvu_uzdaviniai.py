@@ -115,3 +115,27 @@ print(value_unique_count)
 print()
 print("-------------------Šeštas uždavinys-------------")
 print()
+
+# Sugeneruokite du masyvus, kurių reikšmės yra atsitiktiniai skaičiai nuo 100 iki 999. Masyvų ilgiai 100.
+# Masyvų reikšmės turi būti unikalios savo masyve (t.y. neturi kartotis).
+
+array_1 = random.sample(range(100,999), 100)
+array_2 = random.sample(range(100,999), 100)
+print(sorted(array_1))
+print(sorted(array_2))
+
+print()
+print("-------------------Septintas uždavinys-------------")
+print()
+
+# Sugeneruokite masyvą, kuris būtų sudarytas iš reikšmių, kurios yra pirmame 6 uždavinio masyve, bet nėra antrame 6 uždavinio masyve.
+
+array_rnd1 = []
+for i in array_1:
+    if i not in array_2:
+        array_rnd1.append(i)
+print(sorted(array_rnd1))
+
+print()
+print("-------------------Aštuntas uždavinys-------------")
+print()
