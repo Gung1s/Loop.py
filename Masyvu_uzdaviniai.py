@@ -139,3 +139,15 @@ print(sorted(array_rnd1))
 print()
 print("-------------------Aštuntas uždavinys-------------")
 print()
+
+# Sugeneruokite masyvą iš elementų, kurie kartojasi abiejuose 6 uždavinio masyvuose.
+
+array_rnd2 = []
+for i in array_1:
+    if i in array_2:
+        array_rnd2.append(i)
+print(sorted(array_rnd2))
+
+print()
+print("-------------------Devintas uždavinys-------------")
+print()
