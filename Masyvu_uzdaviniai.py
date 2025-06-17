@@ -31,4 +31,32 @@ print()
 arr_add = (random.randint(5,25) for i in range(10))
 arr.extend(arr_add)
 print(f"Išplėstas masyvas: {arr}")
+arr1 = []
+arr2 = []
+for i, val in enumerate(arr):
+    if (i+1) % 2 == 0:
+        arr2.append(val)
+    else:
+        arr1.append(val)
+print(f"Neporiniai indeksų reikšmės: {arr1}")
+print(f"Poriniai indeksų reikšmės: {arr2}")
+print()
+arr_zero = []
+for i, val in enumerate(arr):
+    if (i+1) % 2 == 1:
+        arr_zero.append(val)
+    else:
+        if val > 15:
+            arr_zero.append(0)
+        else:
+            arr_zero.append(val)
+print(f"Masyvas, kur poriniai indeksai pakeisti į 0, jei jų reikšmė didesnė nei 15:")
+print(arr_zero)
+
+for i, val in enumerate(arr):
+    if val > 10:
+        break
+print(f"Pirmas indeksas, kuris yra didesnis už 10: {i}")
+
+
 

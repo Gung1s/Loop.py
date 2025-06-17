@@ -110,3 +110,5 @@ students = [
 
 print(students)
 print()
+
+print (5 % 2)
