@@ -151,3 +151,20 @@ print(sorted(array_rnd2))
 print()
 print("-------------------Devintas uždavinys-------------")
 print()
+
+# Sugeneruokite 10 skaičių masyvą pagal taisyklę: Du pirmi skaičiai- atsitiktiniai nuo 5 iki 25.
+# Trečias, pirmo ir antro suma. Ketvirtas- antro ir trečio suma. Penktas trečio ir ketvirto suma ir t.t.
+
+array_10 = [(random.randint(5,25)) for i in range(2)]
+
+
+# array_10_plus = (array_10[i-1]+array_10[i-2] for i in range(2, 10))
+# array_10.extend(array_10_plus)
+
+array_10.extend(array_10[i-1]+array_10[i-2] for i in range(2, 10))
+
+# for i in range(2,10):
+#     array_10.append(array_10[i-1]+array_10[i-2])
+
+print(array_10)
+
