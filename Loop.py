@@ -92,3 +92,21 @@ for y in range(1, 11):
     for x in range(1, 11):
         print(y*x, end=" ")
     print() # po END duoda naują eilutę
+
+print("-------------------Masyvai-----------------")
+
+grades = [
+    [1,2,2],
+    [5,8,9],
+    [2,8,9]
+]
+
+students = [
+    ["Rima", "Beitnorę", 1988, "da"],
+    ["Neringa", "Dainauskė", 1988, "da"],
+    ["Lukas", "Bukauskas", 1989, "da"],
+    ["Tomas", "Strelčiūnas", 1984, "da"],
+]
+
+print(students)
+print()

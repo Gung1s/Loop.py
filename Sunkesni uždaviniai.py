@@ -99,8 +99,10 @@ while True:
     else:
         print("Skaičius")
 print()
+
 print("-------------Tris kartus iškritus herbui---------------")
 print()
+
 herbai = 0
 while herbai < 3:
     result = random.randint(0,1)
@@ -113,6 +115,7 @@ print()
 
 print("-------------Tris kartus iš eilės iškritus herbui---------------")
 print()
+
 herbai = 0
 while herbai < 3:
     result = random.randint(0,1)
@@ -223,7 +226,7 @@ for v in range(1,6):
             print("miss", end=" ")
     counter += hits
 print()
-print(f"Sukalti penkias vinis didelių smūgių užteks: {counter}")
+print(f"Sukalti penkias vinis didelių smūgių reikės: {counter}")
 print()
 
 print()
