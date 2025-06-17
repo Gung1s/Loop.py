@@ -179,43 +179,52 @@ print()
 # Jeigu sumų skirtumas (modulis, absoliutus dydis) yra didesnis nei | 30 | rūšiavimą kartokite.
 # (Kad sumos nesiskirtų viena nuo kitos daugiau nei per 30)
 
-
-array_101 = []
-while len(array_101) < 101:
-    new_value = random.randint(0,300)
-    if new_value not in array_101:
-        array_101.append(new_value)
-
-
-
-# array_101=[]
-# while len(array_101) < 101:
-#     array = [random.randint(0,300) for i in range(101)]
-#     unique = list(set(array))
-#     array_101.append(unique)
-#
-# print(sorted(array_101))
-# print(len(array_101))
-#
-# array_101=[]
-# while len(array_101) < 101:
-#     num = random.randint(0,300)
-#     is_unique = True
-#     for i in array_101:
-#         if i == num:
-#             is_unique = False
-#     if is_unique:
-#         array_101.append(i)
+while True:
+    array_101 = []
+    while len(array_101) < 101:
+        new_value = random.randint(0, 300)
+        if new_value not in array_101:
+            array_101.append(new_value)
 
 
-middle_index = len(array_101) // 2
-middle_value = max(array_101)
-array_101.remove(middle_value)
-left = array_101[:middle_index]
-right = array_101[middle_index:]
-new_array = sorted(left) +[middle_value] + sorted(right, reverse=True)
-print(middle_value)
+
+    # array_101=[]
+    # while len(array_101) < 101:
+    #     array = [random.randint(0,300) for i in range(101)]
+    #     unique = list(set(array))
+    #     array_101.append(unique)
+    #
+    # print(sorted(array_101))
+    # print(len(array_101))
+    #
+    # array_101=[]
+    # while len(array_101) < 101:
+    #     num = random.randint(0,300)
+    #     is_unique = True
+    #     for i in array_101:
+    #         if i == num:
+    #             is_unique = False
+    #     if is_unique:
+    #         array_101.append(i)
+
+
+    middle_index = len(array_101) // 2
+    middle_value = max(array_101)
+    array_101.remove(middle_value)
+    left = array_101[:middle_index]
+    right = array_101[middle_index:]
+    new_array = sorted(left) +[middle_value] + sorted(right, reverse=True)
+    # print(middle_value)
+    # print(new_array)
+    # print(array_101)
+    # print()
+    sum_left = sum(left)
+    sum_right = sum(right)
+    if abs(sum_left - sum_right) <= 30:
+        break
+print("Masyvas:")
 print(new_array)
-print(array_101)
+print(f"Kairės pusės suma: {sum_left}")
+print(f"Dešinės pusės suma: {sum_right}")
+print(f"Didžiausias skaičius masyve: {middle_value}")
 print()
-
